@@ -16,12 +16,7 @@ import java.util.Scanner;
 public class QuestaoUm {
 
 public static void main(String[] args) {
-	/**
-	 * Método main chama o método montaEscada() e retorna sua resposta;
-	 * 
-	 * @param int numero define a quantide de linhas(*) que formarão a escada
-	 * @return String escadaMontada retorna o desenho da escada
-	 */
+	
 	int numero;
 	String escadaMontada;
 	Scanner scanner = new Scanner(System.in);
@@ -35,17 +30,7 @@ public static void main(String[] args) {
 }
 
 public static String montaEscada(int numero) {
-	/**
-	 * Método montaEscada() realiza um laço for através do iterador a, que é o
-	 * responsável por verificar qual linha da escada esta sendo construida e
-	 * adicionar espaços e asteriscos até que o tamanho final seja atingido.
-	 * 
-	 * @return String escada retorna o desenho da escada
-	 * 
-	 * O método repeat() é usado para retornar String cujo valor é a concatenação de
-	 * determinadas vezes de contagem repetida de String.
-
-	 */
+	
 	int a;
 	String escada = "";
 
@@ -69,14 +54,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class QuestaoDois {
-/**
- * Método main chama o método validaSenha() e retorna sua resposta;
- * 
- * @param String senha recebe a palavra que será validada no metodo
- *               validaSenha()
- * @return int valor retorna um numero maior que 0 se a senha for validada como
- *         fraca ou 0 se a senha for validada como forte
- */
+
 public static void main(String[] args) {
 
 	String senha;
@@ -90,29 +68,6 @@ public static void main(String[] args) {
 	System.out.println(valor);
 
 }
-
-/**
- * Método validaSenha() recebe uma string e análisa, através de expressões
- * regulares, se a senha é forte ( senha == 0) ou fraca ( senha > 0).
- * 
- * @param senhaMinuscula expressão regular que valida se a senha possui
- *                       caracteres minúsculos
- * @param senhaMaiuscula expressão regular que valida se a senha possui
- *                       caracteres maiúsculos
- * @param senhaDigito    expressão regular que valida se a senha possui
- *                       caracteres numéricos
- * @param senhaEspecial  expressão regular que valida se a senha possui
- *                       caracteres especiais
- * 
- * @param Boolean        para cada pattern -> Verdadeiro se cumpre os requisitos
- *                       do pattern -> Falso se não cumpre os requisitos do
- *                       pattern, adiciona 1 a x.
- * 
- * @return int x se o tamanho da senha mais o valor de x for maior que 6, senão
- *         retorna int y, indicando quantos digitos faltam para formar uma senha
- *         forte.
- * 
- */
 
 public static Integer validaSenha(String senha) {
 	int tamanho = senha.length();
@@ -161,14 +116,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class QuestaoTres {
-/**
- * Método main chama o método montaParesAnagrama() e retorna sua resposta;
- * 
- * @param String palavra recebe a palavra que será analisada no método
- *               montaParesAnagrama()
- * 
- * @return int valor retorna o número de pares de anagrama da palavra digitada
- */
 
 public static void main(String[] args) {
 
@@ -183,22 +130,6 @@ public static void main(String[] args) {
 	System.out.println(valor);
 }
 
-/**
- * Método montaParesAnagrama() recebe uma string e retorna a quantidade de pares
- * de anagramas que são possíveis formar a partir do input recebido.
- * 
- * A palavra recebida no método é transformada, através do laço for, em um array
- * com todos os possíveis pares de substring, e depois ordenado através do sort.
- * 
- * A estrutura boleana separa a quantidade de anagramas e as armazena junto a
- * sua chave no map.
- * 
- * Outro laço for é feito para definir os pares de anagramas e esse valor é
- * armazenado em paresAnagrama
- * 
- * @return int paresAnagrama retorna o valor de pares de anagramas encontrado na
- *         string palavra
- */
 public static Integer montaParesAnagrama(String palavra) {
 
 	HashMap<String, Integer> map = new HashMap<>();
